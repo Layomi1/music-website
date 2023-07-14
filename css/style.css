@@ -76,7 +76,7 @@ header .menu_side .playlist h4 span::before {
     height: 4px;
     border: 2px solid #4c5262;
     border-radius: 50%;
-    top: 4px;
+    /* top: 4px; */
     transition:.3s linear ;
 }
 
@@ -84,7 +84,7 @@ header .menu_side .playlist h4:hover span::before {
     border: 2px solid  #fff;
 }
 
-header .menu_side .playlist h4 .bi {
+header .menu_side .playlist h4 .fas {
     display: none;
 } 
 
@@ -95,7 +95,7 @@ header .menu_side .playlist .active {
 header .menu_side .playlist .active span {
     display: none;
 }
-header .menu_side .playlist .active .bi{
+header .menu_side .playlist .active .fas{
     display: flex;
     margin-right: 20px ;
 }
@@ -105,6 +105,7 @@ header .menu_side .menu_song{
     height: 300px;
     /* border: 1px solid #fff; */
     margin-top: 30px;
+    
 }
 header .menu_side .menu_song li{ 
     position: relative;
@@ -140,7 +141,7 @@ header .menu_side .menu_song li h5 .subtitle {
     color:#4c5262; ; 
  
 }
-header .menu_side .menu_song li .bi {
+header .menu_side .menu_song li .fas {
     position: absolute;
     right: 15px ;
     top: 6px;
@@ -176,17 +177,6 @@ header .master_play .wave .wave1:nth-child(3){
     height: 8px;
     /* animation-delay: .8s; */
 }
-@keyframes wave {
-    0% {
-        height: 10px; 
-    }
-    50% {
-        height: 15px;
-    }
-    0% {
-        height: 10px;
-    } 
-}
 /* javascript class wave */
 header .master_play .active2 .wave1{
     animation: wave .5s linear infinite;
@@ -198,6 +188,19 @@ header .master_play .active2 .wave1:nth-child(2) {
 header .master_play .active2 .wave1:nth-child(3) {
     animation-delay: .8s;
 }
+
+@keyframes wave {
+    0% {
+        height: 10px; 
+    }
+    50% {
+        height: 15px;
+    }
+    0% {
+        height: 10px;
+    } 
+}
+
 header .master_play img{
     width: 35px;
     height: 35px;
@@ -214,16 +217,16 @@ header .master_play h5 .subtitle {
     color: #4c5262;
 }
 header .master_play .icon {
-    font-size: 20px;
+    font-size: 10px;
     color: #fff;
     margin: 0 20px 0 40px;
     display: flex;
 } 
-header .master_play .icon .bi {
+header .master_play .icon .fas {
     cursor: pointer;
     outline: none;
 }
-header .master_play .icon .bi:nth-child(2) {
+header .master_play .icon .fas:nth-child(2) {
     border: 1px solid rgba(105, 105, 170, 0.1);
     border-radius: 50%;
     padding: 1px 3px 0 6px;
@@ -291,15 +294,16 @@ header .master_play .vol {
     position: relative;
     width: 100px ;
     height: 2px;
-    margin-left: 50px;
+    margin-left: 55px;
     background: rgba(105, 105, 170, 0.1);
+
 }
-header .master_play .vol .bi {
+header .master_play .vol .fas {
     position: absolute;
     color: #fff;
-    font-size: 25px;
-    top: -17px;
-    left: -50px; 
+    font-size: 15px;
+    top: -6px;
+    left: -2px; 
 }
 header .master_play .vol input {
     position: absolute;
@@ -497,12 +501,13 @@ header .song_side .popular_song .h4 {
     justify-content: space-between  ;    
 }
    
-header .song_side .popular_song .h4 .bi{
+header .song_side .popular_song .h4 .fas{
     color: #a4a8a4; 
     cursor: pointer;
     transition: .1s linear;
+    font-size: 10px;
 }
-header .song_side .popular_song .h4 .bi:hover{
+header .song_side .popular_song .h4 .fas:hover{
     color: #fff; 
 }
 header .song_side .popular_song .pop_song{
@@ -540,14 +545,15 @@ header .song_side .popular_song .pop_song li .img_play img {
     height:100% ;
     
 }
-header .song_side .popular_song .pop_song li .img_play .bi {
+header .song_side .popular_song .pop_song li .img_play .fas {
    position: absolute;
    cursor: pointer;
    font-size: 20px;
    transition: .3s linear;
    opacity: 0;  
+   
 }
-header .song_side .popular_song .pop_song li .img_play:hover .bi{
+header .song_side .popular_song .pop_song li .img_play:hover .fas{
    opacity: 1;
 }
 header .song_side .popular_song .pop_song li h5{
@@ -564,7 +570,8 @@ header .song_side .popular_artists {
     height: auto;
     /* border: 1px solid #fff; */
     margin: auto;
-    margin-top: 15px;   
+    margin-top: 10px; 
+
 } 
 header .song_side .popular_artists .h4 {
     display: flex;
@@ -572,12 +579,13 @@ header .song_side .popular_artists .h4 {
     justify-content: space-between  ;    
 }
    
-header .song_side .popular_artists .h4 .bi{
+header .song_side .popular_artists .h4 .fas{
     color: #a4a8a4; 
     cursor: pointer;
     transition: .1s linear;
+    font-size: 10px;
 }
-header .song_side .popular_artists .h4 .bi:hover{
+header .song_side .popular_artists .h4 .fas:hover{
     color: #fff; 
 }
 header .song_side .popular_artists .item {
@@ -594,8 +602,8 @@ header .song_side .popular_artists .item::-webkit-scrollbar{
 header .song_side .popular_artists .item li {
    list-style-type: none;
    position: relative;
-   min-width: 60px;
-   height: 60px;
+   min-width: 50px;
+   height: 50px;
    /* background-color: #fff; */
    border-radius: 50%;
    margin-right: 20px;
